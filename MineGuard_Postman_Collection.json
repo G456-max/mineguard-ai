@@ -1,0 +1,112 @@
+{
+  "info": {
+    "_postman_id": "mineguard-ai-master-suite",
+    "name": "MineGuard AI - Complete Full-Stack Suite (Enterprise & Web)",
+    "description": "Full collection for all running services: Port 8080 (Web Dashboard & Quantum Engine) and Port 8000 (Enterprise AI, ML, RAG, & Cascade).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "🔥 Enterprise AI, ML & RAG Engine (Port 8000)",
+      "item": [
+        {
+          "name": "1. Enterprise Health Check",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8000/api/health"
+          }
+        },
+        {
+          "name": "2. ML Feature Importance (Random Forest - 25 Features)",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"model_name\": \"random_forest\"\n}"
+            },
+            "url": "http://localhost:8000/api/explain-ml/feature-importance"
+          }
+        },
+        {
+          "name": "3. RAG AI Advisory Question (NIST Documents & Guardrails)",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"How should we migrate RSA-4096 in SCADA under NIST standards?\"\n}"
+            },
+            "url": "http://localhost:8000/api/explain/free"
+          }
+        },
+        {
+          "name": "4. Enterprise Quantum Cascade Simulation (BFS)",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"q_day\": 2029,\n  \"migrated_nodes\": [\"ca-root\", \"ot-gateway\"]\n}"
+            },
+            "url": "http://localhost:8000/api/cascade"
+          }
+        },
+        {
+          "name": "5. Interactive Swagger API Docs",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8000/docs"
+          }
+        }
+      ]
+    },
+    {
+      "name": "⚡ Web Dashboard & Quantum Core Engine (Port 8080)",
+      "item": [
+        {
+          "name": "1. Web Engine Health Check",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/health"
+          }
+        },
+        {
+          "name": "2. Threat Model (Shor vs Grover)",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/threat-model"
+          }
+        },
+        {
+          "name": "3. 20-Node Mining SCADA Graph",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/graph"
+          }
+        },
+        {
+          "name": "4. Cascade Simulator (Q-Day 2029, $3.0M loss)",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/cascade?year=2029"
+          }
+        },
+        {
+          "name": "5. Migration Priorities (5-Factor Formula)",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/priority"
+          }
+        },
+        {
+          "name": "6. CBOM Generator (CycloneDX JSON)",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/cbom"
+          }
+        }
+      ]
+    }
+  ]
+}

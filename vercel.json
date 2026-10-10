@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "mineguard-ai",
+  "cleanUrls": true,
+  "outputDirectory": "web_dashboard",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ]
+}
